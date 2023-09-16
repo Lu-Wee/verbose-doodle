@@ -1,2 +1,16 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<H1>sup dudez!</H1>
+<h1>sup</h1>
+<div id="app">{{ message }}</div>
+
+<script>
+  const { createApp, ref } = Vue
+
+  createApp({
+    setup() {
+      const message = ref('Hello vue!')
+      return {
+        message
+      }
+    }
+  }).mount('#app')
+</script>
